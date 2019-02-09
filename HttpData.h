@@ -102,6 +102,7 @@ public:
     void seperateTimer();
     void linkTimer(std::shared_ptr<TimerNode> mtimer)
     {
+        //从一个weak_ptr 构造一个shared_ptr以取得共享资源的所有权。
         // shared_ptr 重载了bool, 但weak_ptr没有
         timer_ = mtimer; 
     }
