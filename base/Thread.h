@@ -1,6 +1,5 @@
-// @Author Lin Ya
-// @Email xxbbb@vip.qq.com
-#pragma once
+#ifndef BASE_THREAD_H
+#define BASE_THREAD_H
 #include "CountDownLatch.h"
 #include "noncopyable.h"
 #include <functional>
@@ -33,3 +32,5 @@ private:
     std::string name_;
     CountDownLatch latch_;
 };
+
+#endif

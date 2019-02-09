@@ -7,6 +7,7 @@
 
 class AsyncLogging;
 
+//对外接口
 
 class Logger
 {
@@ -30,7 +31,6 @@ private:
     public:
         Impl(const char *fileName, int line);
         void formatTime();
-
         LogStream stream_;
         int line_;
         std::string basename_;

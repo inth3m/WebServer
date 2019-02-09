@@ -79,7 +79,7 @@ void *startThread(void* obj)
 
 
 Thread::Thread(const ThreadFunc &func, const string &n)
-  : started_(false),
+    : started_(false),
     joined_(false),
     pthreadId_(0),
     tid_(0),

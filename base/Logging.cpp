@@ -1,5 +1,3 @@
-// @Author Lin Ya
-// @Email xxbbb@vip.qq.com
 #include "Logging.h"
 #include "CurrentThread.h"
 #include "Thread.h"
@@ -28,7 +26,7 @@ void output(const char* msg, int len)
 }
 
 Logger::Impl::Impl(const char *fileName, int line)
-  : stream_(),
+: stream_(),
     line_(line),
     basename_(fileName)
 {

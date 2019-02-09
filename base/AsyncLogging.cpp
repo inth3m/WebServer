@@ -89,7 +89,7 @@ void AsyncLogging::threadFunc(){
 
             buffersToWrite.erase(buffersToWrite.begin()+2, buffersToWrite.end());
         }
-         for (size_t i = 0; i < buffersToWrite.size(); ++i)
+        for (size_t i = 0; i < buffersToWrite.size(); ++i)
         {
             // FIXME: use unbuffered stdio FILE ? or use ::writev ?
             output.append(buffersToWrite[i]->data(), buffersToWrite[i]->length());
@@ -120,5 +120,5 @@ void AsyncLogging::threadFunc(){
         buffersToWrite.clear();
         output.flush();
     }
-     output.flush();
+    output.flush();
 }
