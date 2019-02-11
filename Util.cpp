@@ -109,18 +109,18 @@ ssize_t readn(int fd, std::string &inBuffer)
 ssize_t writen(int fd, void *buff, size_t n)
 {
     size_t nleft = n;
-    ssize_t nwritten = 0;
+    ssize_t n_written = 0;
     ssize_t writeSum = 0;
     char *ptr = (char*)buff;
     while (nleft > 0)
     {
-        if ((nwritten = write(fd, ptr, nleft)) <= 0)
+        if ((n_written = write(fd, ptr, nleft)) <= 0)
         {
-            if (nwritten < 0)
+            if (n_written < 0)
             {
                 if (errno == EINTR)
                 {
-                    nwritten = 0;
+                    n_written = 0;
                     continue;
                 }
                 else if (errno == EAGAIN)
@@ -131,9 +131,9 @@ ssize_t writen(int fd, void *buff, size_t n)
                     return -1;
             }
         }
-        writeSum += nwritten;
-        nleft -= nwritten;
-        ptr += nwritten;
+        writeSum += n_written;
+        nleft -= n_written;
+        ptr += n_written;
     }
     return writeSum;
 }
@@ -141,18 +141,18 @@ ssize_t writen(int fd, void *buff, size_t n)
 ssize_t writen(int fd, std::string &sbuff)
 {
     size_t nleft = sbuff.size();
-    ssize_t nwritten = 0;
+    ssize_t n_written = 0;
     ssize_t writeSum = 0;
     const char *ptr = sbuff.c_str();
     while (nleft > 0)
     {
-        if ((nwritten = write(fd, ptr, nleft)) <= 0)
+        if ((n_written = write(fd, ptr, nleft)) <= 0)
         {
-            if (nwritten < 0)
+            if (n_written < 0)
             {
                 if (errno == EINTR)
                 {
-                    nwritten = 0;
+                    n_written = 0;
                     continue;
                 }
                 else if (errno == EAGAIN)
@@ -161,9 +161,9 @@ ssize_t writen(int fd, std::string &sbuff)
                     return -1;
             }
         }
-        writeSum += nwritten;
-        nleft -= nwritten;
-        ptr += nwritten;
+        writeSum += n_written;
+        nleft -= n_written;
+        ptr += n_written;
     }
     if (writeSum == static_cast<int>(sbuff.size()))
         sbuff.clear();
