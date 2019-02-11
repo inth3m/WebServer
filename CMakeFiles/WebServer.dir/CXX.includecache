@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/run/media/h3m/data/学习/项目/WebServer/Util.cpp
+Util.h
+/run/media/h3m/data/学习/项目/WebServer/Util.h
+unistd.h
+-
+fcntl.h
+-
+signal.h
+-
+errno.h
+-
+string.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netinet/tcp.h
+-
+
+/run/media/h3m/data/学习/项目/WebServer/Util.h
+cstdlib
+-
+string
+-
+

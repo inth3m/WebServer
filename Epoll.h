@@ -19,7 +19,7 @@ public:
     std::vector<std::shared_ptr<Channel>> poll();
     std::vector<std::shared_ptr<Channel>> getEventsRequest(int events_num);
     void add_timer(std::shared_ptr<Channel> request_data, int timeout);
-        int getEpollFd()
+    int getEpollFd()
     {
         return epollFd_;
     }

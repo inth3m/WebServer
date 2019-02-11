@@ -9,38 +9,44 @@
 #include <netinet/tcp.h>
 
 const int MAX_BUFF = 4096;
-
-ssize_t readn(int fd, void *buff, size_t n){
-    size_t n_left = n;
-    ssize_t n_read = 0;
+ssize_t readn(int fd, void *buff, size_t n)
+{
+    size_t nleft = n;
+    ssize_t nread = 0;
     ssize_t readSum = 0;
     char *ptr = (char*)buff;
-    while(n_left > 0){
-        if((n_read = read(fd, ptr,n_left)) < 0){
-            if(errno == EINTR)
-                n_read = 0;
-            else if(errno == EAGAIN)
+    while (nleft > 0)
+    {
+        if ((nread = read(fd, ptr, nleft)) < 0)
+        {
+            if (errno == EINTR)
+                nread = 0;
+            else if (errno == EAGAIN)
+            {
                 return readSum;
-            else 
+            }
+            else
+            {
                 return -1;
+            }  
         }
-        else if(n_read == 0)
+        else if (nread == 0)
             break;
-        readSum += n_read;
-        n_left -= n_read;
-        ptr += n_read;
+        readSum += nread;
+        nleft -= nread;
+        ptr += nread;
     }
     return readSum;
 }
 
 ssize_t readn(int fd, std::string &inBuffer, bool &zero)
 {
-    ssize_t n_read = 0;
+    ssize_t nread = 0;
     ssize_t readSum = 0;
     while (true)
     {
         char buff[MAX_BUFF];
-        if ((n_read = read(fd, buff, MAX_BUFF)) < 0)
+        if ((nread = read(fd, buff, MAX_BUFF)) < 0)
         {
             if (errno == EINTR)
                 continue;
@@ -54,7 +60,7 @@ ssize_t readn(int fd, std::string &inBuffer, bool &zero)
                 return -1;
             }
         }
-        else if (n_read == 0)
+        else if (nread == 0)
         {
             //printf("redsum = %d\n", readSum);
             zero = true;
@@ -62,13 +68,14 @@ ssize_t readn(int fd, std::string &inBuffer, bool &zero)
         }
         //printf("before inBuffer.size() = %d\n", inBuffer.size());
         //printf("nread = %d\n", nread);
-        readSum += n_read;
+        readSum += nread;
         //buff += nread;
-        inBuffer += std::string(buff, buff + n_read);
+        inBuffer += std::string(buff, buff + nread);
         //printf("after inBuffer.size() = %d\n", inBuffer.size());
     }
     return readSum;
 }
+
 
 ssize_t readn(int fd, std::string &inBuffer)
 {
@@ -106,21 +113,22 @@ ssize_t readn(int fd, std::string &inBuffer)
     return readSum;
 }
 
+
 ssize_t writen(int fd, void *buff, size_t n)
 {
     size_t nleft = n;
-    ssize_t n_written = 0;
+    ssize_t nwritten = 0;
     ssize_t writeSum = 0;
     char *ptr = (char*)buff;
     while (nleft > 0)
     {
-        if ((n_written = write(fd, ptr, nleft)) <= 0)
+        if ((nwritten = write(fd, ptr, nleft)) <= 0)
         {
-            if (n_written < 0)
+            if (nwritten < 0)
             {
                 if (errno == EINTR)
                 {
-                    n_written = 0;
+                    nwritten = 0;
                     continue;
                 }
                 else if (errno == EAGAIN)
@@ -131,9 +139,9 @@ ssize_t writen(int fd, void *buff, size_t n)
                     return -1;
             }
         }
-        writeSum += n_written;
-        nleft -= n_written;
-        ptr += n_written;
+        writeSum += nwritten;
+        nleft -= nwritten;
+        ptr += nwritten;
     }
     return writeSum;
 }
@@ -141,18 +149,18 @@ ssize_t writen(int fd, void *buff, size_t n)
 ssize_t writen(int fd, std::string &sbuff)
 {
     size_t nleft = sbuff.size();
-    ssize_t n_written = 0;
+    ssize_t nwritten = 0;
     ssize_t writeSum = 0;
     const char *ptr = sbuff.c_str();
     while (nleft > 0)
     {
-        if ((n_written = write(fd, ptr, nleft)) <= 0)
+        if ((nwritten = write(fd, ptr, nleft)) <= 0)
         {
-            if (n_written < 0)
+            if (nwritten < 0)
             {
                 if (errno == EINTR)
                 {
-                    n_written = 0;
+                    nwritten = 0;
                     continue;
                 }
                 else if (errno == EAGAIN)
@@ -161,9 +169,9 @@ ssize_t writen(int fd, std::string &sbuff)
                     return -1;
             }
         }
-        writeSum += n_written;
-        nleft -= n_written;
-        ptr += n_written;
+        writeSum += nwritten;
+        nleft -= nwritten;
+        ptr += nwritten;
     }
     if (writeSum == static_cast<int>(sbuff.size()))
         sbuff.clear();
@@ -180,6 +188,18 @@ void handle_for_sigpipe()
     sa.sa_flags = 0;
     if(sigaction(SIGPIPE, &sa, NULL))
         return;
+}
+
+int setSocketNonBlocking(int fd)
+{
+    int flag = fcntl(fd, F_GETFL, 0);
+    if(flag == -1)
+        return -1;
+
+    flag |= O_NONBLOCK;
+    if(fcntl(fd, F_SETFL, flag) == -1)
+        return -1;
+    return 0;
 }
 
 void setSocketNodelay(int fd) 
@@ -202,20 +222,23 @@ void shutDownWR(int fd)
     //printf("shutdown\n");
 }
 
-int socket_bind_listen(int port){
+int socket_bind_listen(int port)
+{
     // 检查port值，取正确区间范围
     if (port < 0 || port > 65535)
         return -1;
-        // 创建socket(IPv4 + TCP)，返回监听描述符
+
+    // 创建socket(IPv4 + TCP)，返回监听描述符
     int listen_fd = 0;
     if((listen_fd = socket(AF_INET, SOCK_STREAM, 0)) == -1)
         return -1;
+
     // 消除bind时"Address already in use"错误
     int optval = 1;
     if(setsockopt(listen_fd, SOL_SOCKET,  SO_REUSEADDR, &optval, sizeof(optval)) == -1)
         return -1;
 
-    // 设置服务器 IP和Port，和监听描述副绑定
+    // 设置服务器IP和Port，和监听描述副绑定
     struct sockaddr_in server_addr;
     bzero((char*)&server_addr, sizeof(server_addr));
     server_addr.sin_family = AF_INET;
