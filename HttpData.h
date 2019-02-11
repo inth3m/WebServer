@@ -1,6 +1,7 @@
 #ifndef HTTPDATA_H
 #define HTTPDATA_H
 
+#include "Timer.h"
 #include <string>
 #include <unordered_map>
 #include <map>
@@ -13,8 +14,8 @@ class EventLoop;
 class TimerNode;
 class Channel;
 
-
-enum ProcessState{
+enum ProcessState
+{
     STATE_PARSE_URI = 1,
     STATE_PARSE_HEADERS,
     STATE_RECV_BODY,
@@ -75,8 +76,8 @@ enum HttpVersion
     HTTP_11
 };
 
-//MIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据
-class MimeType{
+class MimeType
+{
 private:
     static void init();
     static std::unordered_map<std::string, std::string> mime;
@@ -87,23 +88,20 @@ public:
     static std::string getMime(const std::string &suffix);
 
 private:
-int pthread_once(pthread_once_t *once_control, void (*init_routine) (void));
-
-// 本函数使用初值为PTHREAD_ONCE_INIT 的once_control 变量保证init_routine()函数在本进程执行序列中仅执行一次。
     static pthread_once_t once_control;
 };
 
-//继承该类就可以进行基于当前子类进行安全的weap_ptr到shared_ptr的转换...
-class HttpData: public std::enable_shared_from_this<HttpData>{
+
+class HttpData: public std::enable_shared_from_this<HttpData>
+{
 public:
-    HttpData(EventLoop* loop, int connfd);
+    HttpData(EventLoop *loop, int connfd);
     ~HttpData() { close(fd_); }
     void reset();
     void seperateTimer();
     void linkTimer(std::shared_ptr<TimerNode> mtimer)
     {
-        //从一个weak_ptr 构造一个shared_ptr以取得共享资源的所有权。
-        // shared_ptr 重载了bool, 但weak_ptr没有
+        // shared_ptr重载了bool, 但weak_ptr没有
         timer_ = mtimer; 
     }
     std::shared_ptr<Channel> getChannel() { return channel_; }
