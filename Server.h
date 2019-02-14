@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SEEVER_H
+#define SEEVER_H
+
 #include "EventLoop.h"
 #include "Channel.h"
 #include "EventLoopThreadPool.h"
@@ -25,3 +27,5 @@ private:
     int listenFd_;
     static const int MAXFDS = 100000;
 };
+
+#endif

@@ -1,5 +1,3 @@
-// @Author Lin Ya
-// @Email xxbbb@vip.qq.com
 #pragma once
 #include "base/noncopyable.h"
 #include "EventLoopThread.h"
