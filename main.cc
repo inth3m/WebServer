@@ -15,7 +15,7 @@ int main(int argc,char **argv){
 				printf("  -v\t: show version and exiet\n");
 				printf("  -c\t: set configuration file(default: conf/WebServer.conf)\n)");
 				return 0;
-			case 'v':printf("WebServer version WebServer/1.11\n");return 0;
+			case 'v':printf("h3m's WebServer version WebServer1.0\n");return 0;
 			case 'c':strncpy(conf,optarg,99);break;
 			default:break;
 		}
