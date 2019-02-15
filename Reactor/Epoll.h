@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Channel.h"
-#include "../Packet.h"
-#include "../Http_conn.h"
+#include "../HTTPServer/Packet.h"
+#include "../HTTPServer/Http_conn.h"
 #include <unordered_map>
 #include <vector>
 #include <memory>
