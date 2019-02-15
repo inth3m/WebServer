@@ -3,8 +3,8 @@
 #include "Packet.h"
 #include "Http_conn.h"
 #include "Reactor/EventLoop.h"
-#include "Threadpool/ThreadpoolEventLoop.h"
-#include "log/Logging.h"
+#include "ThreadPool/ThreadpoolEventLoop.h"
+#include "Log/Logging.h"
 
 class Server{
 private:
