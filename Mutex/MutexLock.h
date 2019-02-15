@@ -1,5 +1,7 @@
 #pragma once
 
+#define DEBUG
+
 #include <pthread.h>
 #include "../noncopyable.h"
 

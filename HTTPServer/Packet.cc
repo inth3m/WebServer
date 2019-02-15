@@ -46,6 +46,7 @@ int Fcntl(int fd,int cmd,long arg){
 int setnonblocking(int sockfd){
 	int val=Fcntl(sockfd,F_GETFL,0);
 	Fcntl(sockfd,F_SETFL,val|O_NONBLOCK);
+	return val;
 }
 
 int Epoll_create(int size){

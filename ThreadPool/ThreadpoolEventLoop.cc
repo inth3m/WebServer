@@ -1,3 +1,4 @@
+
 #include "ThreadpoolEventLoop.h"
 
 ThreadpoolEventLoop::ThreadpoolEventLoop(int Threadnum)
@@ -22,5 +23,6 @@ void ThreadpoolEventLoop::start(){
 
 SP_EventLoop ThreadpoolEventLoop::getNextloop(){
 	index=(index+1)%threadnum;
+	LOG<<"getNextloop = "<<index;
 	return elv[index]->getLoop();
 }

@@ -22,7 +22,7 @@ struct ThreadData{
 
     void runInThread(){
         func();
- 	}
+	}
 };
 
 class Thread:noncopyable{

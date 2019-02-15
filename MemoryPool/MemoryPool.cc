@@ -10,7 +10,6 @@ void MemoryPool::init(int size){
 }
 
 MemoryPool::~MemoryPool(){
-	printf("Memory release!\n");
 	Slot* curr=currentBlock;
 	while(curr){
 		Slot* prev=curr->next;
@@ -120,6 +119,8 @@ void free_memory(size_t size,void *p){
 		memorypool[((size+7)>>3)-1].deallocate(reinterpret_cast<Slot *>(p));
 }*/
 
+//初始化64个内存块
+//内存块是八的整数倍
 void init_memorypool(){
 	for(int i=0;i<64;++i)
 		get_memorypool(i).init((i+1)<<3);

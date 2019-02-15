@@ -46,15 +46,18 @@ void EventLoop::addTimer(SP_Channel channel,int timeout){
 void EventLoop::queueInLoop(Functor &&cb){
 	{
 		MutexLockGuard lock(mutex);
+		//cb加入队列
 		pendingfunctorq.emplace_back(std::move(cb));
 	}
 	uint64_t buffer=1;
+	//将缓冲区写入的8字节整形值加到内核计数器上
 	if(write(wakeupfd,&buffer,sizeof(buffer))<0)
 		LOG<<"wake up write error";
 }
 
 void EventLoop::doPendingFunctors(){
 	uint64_t buffer;
+	//读取8字节值， 并把计数器重设为0
 	if(read(wakeupfd,&buffer,sizeof(buffer))<0)
 		LOG<<"wake up read error";
 	std::vector<Functor> next;

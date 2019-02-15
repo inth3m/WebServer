@@ -29,7 +29,7 @@ Http_conn::~Http_conn(){
 }
 
 /*
- 从inbuffer中找到从pos开始的第一个c字符
+从inbuffer中找到从pos开始的第一个c字符
  */
 bool Http_conn::Read(string &msg,string str){
 	int next=inbuffer.find(str,pos);
@@ -125,7 +125,7 @@ void Http_conn::parse(){
         channel->setDeleted(true);
         channel->getLoop().lock()->addTimer(channel,0);
 		return;
-        //读到RST和FIN默认FIN处理方式，这里的话因为我不太清楚读到RST该怎么处理，就一起这样处理好了
+        //读到RST 和FIN 默认FIN处理方式
     }
 	while(inbuffer.length()&&~inbuffer.find("\r\n",pos))
 		parsestate=handleparse[parsestate]();
@@ -148,7 +148,7 @@ void Http_conn::send(){
 		}
 		outbuffer += "Content-Type: " + filetype + "\r\n";
 		outbuffer += "Content-Length: " + to_string(size) + "\r\n";
-        outbuffer += "Server: WWQ's Web Server\r\n";
+        outbuffer += "Server: h3m's WebServer\r\n";
 		outbuffer += "\r\n";
 		if(!(getCache().get(path,outbuffer))){
 			int src_fd=Open((storage+path).c_str(),O_RDONLY,0);
@@ -173,12 +173,12 @@ void Http_conn::handleError(int errornum,string msg){//暂时统一用400,Bad Re
 	body += "<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></head>";
 	body += "<body bgcolor=\"ffffff\">";
 	body += to_string(errornum) + msg;
-    body += "<hr><em> WWQ's Web Server</em>\n</body></html>";
+    body += "<hr><em> h3m's WebServer</em>\n</body></html>";
 	string outbuffer = "HTTP/1.1 " + to_string(errornum) + msg + "\r\n";
     outbuffer += "Content-Type: text/html\r\n";
     outbuffer += "Connection: Close\r\n";
     outbuffer += "Content-Length: " + to_string(body.size()) + "\r\n";
-    outbuffer += "Server: WWQ's Web Server\r\n";;
+    outbuffer += "Server: h3m's Web Server\r\n";;
     outbuffer += "\r\n";	
 	outbuffer +=body;
     const char *buffer=outbuffer.c_str();
