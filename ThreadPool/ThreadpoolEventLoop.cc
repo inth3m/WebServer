@@ -23,6 +23,6 @@ void ThreadpoolEventLoop::start(){
 
 SP_EventLoop ThreadpoolEventLoop::getNextloop(){
 	index=(index+1)%threadnum;
-	LOG<<"getNextloop = "<<index;
+	//LOG<<"getNextloop = "<<index;
 	return elv[index]->getLoop();
 }

@@ -19,7 +19,7 @@ void Server::handleconn(){
 	socklen_t clilen=sizeof(cliaddr);
 	int connfd;
 	while((connfd=Accept(listenfd,(SA *)&cliaddr,&clilen))>=0){
-		LOG<<"accept fd="<<connfd;
+		//LOG<<"accept fd="<<connfd;
 		setnonblocking(connfd);
 		SP_EventLoop nextloop=iothreadpool->getNextloop();
 		SP_Channel connchannel(newElement<Channel>(nextloop),deleteElement<Channel>);

@@ -39,7 +39,7 @@ void Channel::setnotFirst(){
 }
 
 Channel::~Channel(){
-	LOG<<"delete fd="<<fd;
+	//LOG<<"delete fd="<<fd;
 	Close(fd);
 }
 void Channel::setFd(int Fd){
