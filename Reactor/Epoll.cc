@@ -38,6 +38,7 @@ void Epoll::del(const SP_Channel &request){
 
 void Epoll::poll(std::vector<SP_Channel> &req){
 	int nfds=epoll_wait(epollfd,&*events.begin(),EVENTS,EPOLLWAIT_TIME);
+	LOG<<"new event";
 	for(int i=0;i<nfds;++i){
 		int fd=events[i].data.fd;
 		SP_Channel temp=Channelmap[fd];

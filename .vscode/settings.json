@@ -45,5 +45,8 @@
         "utility": "cpp",
         "algorithm": "cpp",
         "cstring": "cpp"
-    }
+    },
+    "cSpell.words": [
+        "parse"
+    ]
 }

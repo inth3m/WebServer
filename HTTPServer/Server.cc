@@ -19,8 +19,9 @@ void Server::handleconn(){
 	socklen_t clilen=sizeof(cliaddr);
 	int connfd;
 	while((connfd=Accept(listenfd,(SA *)&cliaddr,&clilen))>=0){
-		//LOG<<"accept fd="<<connfd;
+		LOG<<"accept fd="<<connfd;
 		setnonblocking(connfd);
+		//分配一个loop(线程)
 		SP_EventLoop nextloop=iothreadpool->getNextloop();
 		SP_Channel connchannel(newElement<Channel>(nextloop),deleteElement<Channel>);
 		connchannel->setFd(connfd);
@@ -28,7 +29,7 @@ void Server::handleconn(){
 		WP_Channel wpchannel=connchannel;
 		connchannel->setClosehandler(bind(&Server::handleclose,this,wpchannel));
 		SP_Http_conn connhttp(newElement<Http_conn>(connchannel),deleteElement<Http_conn>);
-		Httpmap[connfd]=move(connhttp);
+		Httpmap[connfd] = move(connhttp);
 		nextloop->queueInLoop(bind(&EventLoop::addPoller,nextloop,move(connchannel)));
 	}
 }

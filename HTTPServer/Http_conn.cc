@@ -119,6 +119,7 @@ PARSESTATE Http_conn::parseSuccess(){
 
 void Http_conn::parse(){
 	bool zero=false;
+	LOG<<"read data";
     int readsum=readn(channel->getFd(),inbuffer,zero);
     if(readsum<0||zero){
         initmsg();
