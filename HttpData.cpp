@@ -447,7 +447,7 @@ URIState HttpData::parseURI()
         }
         pos = _pos;
     }
-    //cout << "fileName_: " << fileName_ << endl;
+    // cout << "fileName_: " << fileName_ << endl;
     // HTTP 版本号
     pos = request_line.find("/", pos);
     if (pos < 0)
@@ -649,8 +649,8 @@ AnalysisState HttpData::analysisRequest()
         }
 
         // 通过文件名filename获取文件信息，并保存在buf所指的结构体stat中
-        cout<<fileName_<<endl;
-
+        //cout<<fileName_<<endl;
+        //fileName_ = "./bolg/templates/login.html";
         struct stat sbuf;
         if (stat(fileName_.c_str(), &sbuf) < 0)
         {
