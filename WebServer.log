@@ -1,0 +1,231 @@
+2019-03-13 16:25:27
+_PTHREADS is not defined ! -- /home/h3m/下载/WebServer-master/WebServer/Main.cpp:48
+2019-03-13 16:25:40
+New connection from 127.0.0.1:59430 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:25:40
+New connection from 127.0.0.1:59432 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:25:40
+Request: GET / HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:178
+2019-03-13 16:29:08
+_PTHREADS is not defined ! -- /home/h3m/下载/WebServer-master/WebServer/Main.cpp:48
+2019-03-13 16:29:09
+New connection from 127.0.0.1:59544 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:29:09
+New connection from 127.0.0.1:59546 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:29:09
+Request: GET / HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:178
+2019-03-13 16:29:12
+New connection from 127.0.0.1:59548 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:29:12
+Request: GET / HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:178
+2019-03-13 16:29:12
+Request: GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://127.0.0.1/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:178
+2019-03-13 16:30:20
+_PTHREADS is not defined ! -- /home/h3m/下载/WebServer-master/WebServer/Main.cpp:48
+2019-03-13 16:30:28
+New connection from 127.0.0.1:59606 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:30:28
+New connection from 127.0.0.1:59608 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:30:28
+Request: GET / HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:31:10
+Request:  -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:31:14
+New connection from 10.128.208.146:64911 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:31:14
+Request: GET / HTTP/1.1
+Host: 10.128.214.143
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+Accept-Language: zh-cn
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:31:14
+New connection from 10.128.208.146:64912 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:31:14
+Request: GET /favicon.ico HTTP/1.1
+Host: 10.128.214.143
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+Accept-Language: zh-cn
+Referer: http://10.128.214.143/
+Accept-Encoding: gzip, deflate
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:37:37
+_PTHREADS is not defined ! -- /home/h3m/下载/WebServer-master/WebServer/Main.cpp:48
+2019-03-13 16:37:42
+New connection from 127.0.0.1:59838 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:37:45
+Request: GET / HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Purpose: prefetch
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:37:45
+New connection from 127.0.0.1:59840 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:37:45
+New connection from 127.0.0.1:59842 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:38:00
+Request:  -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:38:00
+Request:  -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:42:52
+_PTHREADS is not defined ! -- /home/h3m/下载/WebServer-master/WebServer/Main.cpp:48
+2019-03-13 16:42:58
+New connection from 127.0.0.1:60060 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:43:00
+New connection from 127.0.0.1:60062 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:43:00
+Request: GET / HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:43:12
+Request:  -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:45:04
+_PTHREADS is not defined ! -- /home/h3m/下载/WebServer-master/WebServer/Main.cpp:48
+2019-03-13 16:45:14
+New connection from 127.0.0.1:60198 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:45:14
+New connection from 127.0.0.1:60200 -- /home/h3m/下载/WebServer-master/WebServer/Server.cpp:50
+2019-03-13 16:45:14
+Request: GET / HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:45:14
+Request: GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://127.0.0.1/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:45:15
+Request: GET / HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:45:15
+Request: GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://127.0.0.1/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:45:16
+Request: GET / HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
+2019-03-13 16:45:16
+Request: GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://127.0.0.1/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+ -- /home/h3m/下载/WebServer-master/WebServer/HttpData.cpp:176
