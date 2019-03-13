@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/LoggingTest.dir/LoggingTest.o  -o LoggingTest  -L/home/h3m/下载/WebServer-master/WebServer/base ../libserver_base.a -lpthread -lrt 

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libserver_base.a  CMakeFiles/libserver_base.dir/AsyncLogging.o CMakeFiles/libserver_base.dir/CountDownLatch.o CMakeFiles/libserver_base.dir/FileUtil.o CMakeFiles/libserver_base.dir/LogFile.o CMakeFiles/libserver_base.dir/Logging.o CMakeFiles/libserver_base.dir/LogStream.o CMakeFiles/libserver_base.dir/Thread.o
-/usr/bin/ranlib libserver_base.a
