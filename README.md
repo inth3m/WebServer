@@ -4,8 +4,6 @@
 
 本项目是C++11编写的Web服务器,用状态机解析了http请求,实现了异步日志，记录服务器运行状态。
 
-[测试](https://github.com/inth3m/WebServer/blob/master/%E6%B5%8B%E8%AF%95.md)
-
 ## Environment
 
 - OS:Manjaro 18.0.2 Illyria
@@ -83,3 +81,36 @@ Timer里有两个数据结构：unordered_map和priority_queue，优先队列存
 ![Screenshot_20190215_142508.png](https://i.loli.net/2019/02/15/5c665b4580e6c.png)
 
 ![Screenshot_20190215_140027.png](https://i.loli.net/2019/02/15/5c6655741895f.png)
+
+## 测试
+
+### 测试环境
+
+- OS：Manjaro 18.0.2 Illyria
+- 内存：12G
+- CPU：i5-6300HQ
+
+### 测试方法
+
+- 选择本地环境测试
+- 使用工具Webbench，测试500个客户端，访问30s.
+- 线程池开启4线程
+
+### 测试结果
+
+- WebServer 不关闭LOG连接测试
+
+![Screenshot_20190215_222105.png](https://i.loli.net/2019/02/16/5c67bbb511920.png)
+
+开启LOG，磁盘IO对测试结果有影响
+
+- WebServer 关闭LOG连接测试
+
+![Screenshot_20190216_154127.png](https://i.loli.net/2019/02/16/5c67bea0c4a2e.png)
+
+速度略有提高
+
+CPU负载
+
+![Screenshot_20190216_154619.png](https://i.loli.net/2019/02/16/5c67bfdd21e7e.png)
+
