@@ -1,5 +1,4 @@
-// @Author Lin Ya
-// @Email xxbbb@vip.qq.com
+ 
 #include "LogStream.h"
 #include <algorithm>
 #include <limits>

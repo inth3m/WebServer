@@ -1,5 +1,4 @@
-// @Author Lin Ya
-// @Email xxbbb@vip.qq.com
+ 
 #pragma once
 #include "base/Condition.h"
 #include "base/MutexLock.h"

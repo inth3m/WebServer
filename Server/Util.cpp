@@ -1,5 +1,4 @@
-// @Author Lin Ya
-// @Email xxbbb@vip.qq.com
+ 
 #include "Util.h"
 #include <unistd.h>
 #include <fcntl.h>

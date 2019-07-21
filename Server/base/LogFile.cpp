@@ -1,5 +1,4 @@
-// @Author Lin Ya
-// @Email xxbbb@vip.qq.com
+ 
 #include "LogFile.h"
 #include "FileUtil.h"
 #include <assert.h>

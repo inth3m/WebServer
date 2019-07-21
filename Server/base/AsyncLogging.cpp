@@ -1,5 +1,4 @@
-// @Author Lin Ya
-// @Email xxbbb@vip.qq.com
+
 #include "AsyncLogging.h"
 #include "LogFile.h"
 #include <stdio.h>

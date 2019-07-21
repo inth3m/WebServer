@@ -1,5 +1,4 @@
-// @Author Lin Ya
-// @Email xxbbb@vip.qq.com
+ 
 #include "CountDownLatch.h"
 
 CountDownLatch::CountDownLatch(int count)

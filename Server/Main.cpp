@@ -1,5 +1,4 @@
-// @Author Lin Ya
-// @Email xxbbb@vip.qq.com
+ 
 #include "EventLoop.h"
 #include "Server.h"
 #include "base/Logging.h"

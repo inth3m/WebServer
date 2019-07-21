@@ -1,5 +1,4 @@
-// @Author Lin Ya
-// @Email xxbbb@vip.qq.com
+ 
 #include "Thread.h"
 #include "CurrentThread.h"
 #include <memory>
